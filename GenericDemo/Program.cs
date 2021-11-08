@@ -5,7 +5,14 @@ namespace GenericDemo
 {
     class Program
     {
-
+        public static void toprint<T>(T[] inputarray)
+        {
+            foreach (var element in inputarray)
+            {
+                Console.WriteLine("elements:" + element);
+            }
+            Console.WriteLine("-------");
+        }
 
         static void Main(string[] args)
         {
@@ -13,9 +20,9 @@ namespace GenericDemo
             double[] doubleArray = { 1.1, 2.2, 3.3, 4.4, 5.5 };
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
 
-            new printarray<int>(intArray).toprint();
-            new printarray<double>(doubleArray).toprint();
-            new printarray<char>(charArray).toprint();
+            Program.toprint<int>(intArray);
+            Program.toprint<double>(doubleArray);
+            Program.toprint<char>(charArray);
         }
 
     }
