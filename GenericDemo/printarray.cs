@@ -4,19 +4,20 @@ using System.Text;
 
 namespace GenericDemo
 {
-    class printarray
+    class printarray<T>
     {
-        public static void ToPrint(int[] inputarray)
+        private T[] inputarray;
+        public printarray(T[] inputarray)
         {
-
-            foreach (int element in inputarray)
+            this.inputarray = inputarray;
+        }
+        public void toprint()
+        {
+            foreach (var element in inputarray)
             {
                 Console.WriteLine("elements:" + element);
             }
             Console.WriteLine("-------");
-
         }
-
     }
 }
-
